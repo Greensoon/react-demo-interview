@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>react-demo</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+    <style>
+        html,body,div,a,ul,li,h1,h2,h3,h4,h5,h6{
+            margin:0px;
+            padding: 0px;
+            list-style: none;
+        }
+        div#container {
+            position: absolute;
+            width: 350px;
+            height: 100%;
+            background-color: #607d8b;
+        }
+        div#dmContainer {
+            padding: 30px 30px 150px 30px;
+            border-bottom: 1px;
+            border-bottom-style: groove;
+        }
+        input[type=checkbox],input[type=radio]{
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            margin: 0;
+            cursor: pointer;
+            vertical-align: bottom;
+            background: #607d8b;
+            border: 1px solid #bbb;
+            -webkit-border-radius: 1px;
+            -moz-border-radius: 1px;
+            border-radius: 3px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+            margin-right: 15px;
+        }
+
+        input[type=checkbox]:active,input[type=radio]:active {
+        }
+
+        input[type=checkbox]:hover {
+            -webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+            -moz-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+            box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+        }
+
+        input[type=checkbox]:checked,input[type=radio]:checked {
+
+        }
+
+        input[type=checkbox]:checked::after {
+            content: "\2714";
+            display: block;
+            text-align: center;
+        }
+
+        input[type=checkbox]:focus {
+            outline: none;
+        }
+
+        div#dmHeader {
+            position: relative;
+            margin-bottom: 10px;
+        }
+        button#dmClearAll, #dmHeader h3 {
+            display: inline;
+        }
+        button#dmClearAll {
+            position: absolute;
+            right: 0px;
+            background-color: #607d8b;
+            border: 0px;
+            color: #FFF;
+        }
+        h3 {
+            color: #BFC8CC;
+        }
+
+        #dmListContainer ul li {
+            margin-bottom: 10px;
+            color: #BFC8CC;
+            font-size: 12px;
+            margin-left: 30px;
+            position: relative;
+        }
+        li.dmDeptTitle {
+            margin-left: 0px!important;
+            color: #FFF;
+        }
+        li.dmDeptTitle span{
+            color: #FFF;
+        }
+        span.dmNupos {
+            position: absolute;
+            right: 0px;
+            text-align: right;
+        }
+        .dmDeptTitle .dmNupos {
+            background-color: #445e6b;
+            padding: 4px 8px 6px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="dmContainer">
+        <div id="dmHeader">
+            <h3>招聘职位</h3>
+            <button id="dmClearAll">清空</button>
+        </div>
+
+        <div id="dmListContainer">
+            <ul>
+
+
+                <li class="dmDeptTitle"><input type="checkbox" /><span>工程研发部门</span><span class="dmNupos">120</span></li>
+                <li><input type="checkbox" /><span>Mac 开发工程师</span><span class="dmNupos">9</span></li>
+                <li><input type="checkbox" /><span>IOS app 测试工程师</span><span class="dmNupos">17</span></li>
+                <li><input type="checkbox" /><span>Android 远程控制工程师</span><span class="dmNupos">61</span></li>
+                <li><input type="checkbox" /><span>Web 前端工程师</span><span class="dmNupos">31</span></li>
+                <li><input type="checkbox" /><span>Android 多媒体软件开发工程师</span><span class="dmNupos">2</span></li>
+            </ul>
+            <ul>
+                <li class="dmDeptTitle"><input type="checkbox" /><span>产品设计部门</span><span class="dmNupos">136</span></li>
+                <li><input type="checkbox" /><span>网页设计师</span><span class="dmNupos">9</span></li>
+                <li><input type="checkbox" /><span>ID/工业设计师</span><span class="dmNupos">17</span></li>
+                <li><input type="checkbox" /><span>视觉设计师/GUI界面设计师</span><span class="dmNupos">61</span></li>
+                <li><input type="checkbox" /><span>平面设计师</span><span class="dmNupos">31</span></li>
+                <li><input type="checkbox" /><span>Mac 开发工程师</span><span class="dmNupos">2</span></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>

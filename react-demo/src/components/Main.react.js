@@ -9,24 +9,23 @@ var Main = React.createClass({
     getInitialState : function(){
         return {
             currParent : null,
-            isAllSelected : false
+            isAllChecked : false
         }
     },
 
-    handleChecked : function(parentRef,selectFlag){
+    handleChecked : function(parentRef,checkedFlag){
         this.setState({
             currParent : parentRef,
-            isAllSelected : selectFlag
+            isAllChecked : checkedFlag
         })
     },
 
     render : function(){
         var users = this.props.datas;
-
         return (
             <div id="dmContainer">
                 <Header handleChecked={this.handleChecked}></Header>
-                <List users={users} handleChecked={this.handleChecked}></List>
+                <List users={users} handleChecked={this.handleChecked} currParent={this.state.currParent} isAllChecked={this.state.isAllChecked}></List>
             </div>
         )
     }

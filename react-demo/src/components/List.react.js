@@ -7,14 +7,14 @@ var Item = require("./Item.react");
 var ItemTitle = require("./ItemTitle.react")
 
 var List = React.createClass({
-    handleChecked : function(){
-        this.props.handleChecked();
-    },
     render : function(){
         var ItemList = [];
         var lastDept = null;
         var totalList = [];
-        var handleChecked = this.handleChecked;
+        var handleChecked = this.props.handleChecked;
+        var parentRef = this.props.currParent;
+        var isAllChecked = this.props.isAllChecked;
+
         this.props.users.forEach(function(user){            //处理和相对的条目总和
             var totalObj={count:0};
 
@@ -38,14 +38,18 @@ var List = React.createClass({
         });
         this.props.users.forEach(function(user){
 
+            var flag =false;
+            if(user.dept==parentRef){
+                flag=isAllChecked;
+            }
 
             if(lastDept!=user.dept){
                 var totalCount = getCountByDept(user.dept,totalList);
-                ItemList.push(<ItemTitle name={user.dept} key={user.dept} totalCount={totalCount} handleChecked={handleChecked}></ItemTitle>);
+                ItemList.push(<ItemTitle name={user.dept} key={user.dept} totalCount={totalCount} handleChecked={handleChecked} checkFlag={flag}></ItemTitle>);
             }
 
 
-            ItemList.push(<Item user={user} key={user.name}></Item>)
+            ItemList.push(<Item user={user} key={user.name} checkFlag={flag} handleChecked={handleChecked}></Item>)
 
             lastDept = user.dept;
         });

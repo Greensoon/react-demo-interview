@@ -4,11 +4,14 @@
 var React = require("react");
 
 var  Header = React.createClass({
+    clearChecked : function(){
+        this.props.handleChecked(null,false);
+    },
     render : function(){
         return (
             <div id="dmHeader">
                 <h3>招聘职位</h3>
-                <button id="dmClearAll">清空</button>
+                <button id="dmClearAll" onClick={this.clearChecked}>清空</button>
             </div>
         )
     }

@@ -1,29 +1,42 @@
 # react-demo-interview
 这是一个简单的react demo，初学react 和 webpack。需要有nodejs环境。
 
-主要用到：
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
+主要用到：
   React with jsx;
   webpack ；
   less；
   
   
-Install & run
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+  
+Install & run：
 
 git clone https://github.com/greensoon/react-demo-interview
 cd react-demo-interview
 
-安装模块
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+安装模块：
 npm install
 
-打包
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+打包：
 webpack --progress --colors
 
-本地服务
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+本地服务启动：
 npm start
 
-在浏览器中输入 localhost:3000
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
+测试：
+在浏览器中输入 localhost:3000 进行测试。
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
 用时：
 git 2小时       3。23 15：00 －－17:00
@@ -32,6 +45,8 @@ react 之前有在学习，温习时间在1个小时左右，编写模版。 3.2
 引入less 
 
 当前在编写逻辑和调试bug。
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
 存在的bug：
 1.当选中一个部门选项的时候，选择下个部门会被取消。

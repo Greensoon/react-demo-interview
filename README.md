@@ -14,7 +14,7 @@
 Install & run：
 
 git clone https://github.com/greensoon/react-demo-interview
-cd react-demo-interview
+cd react-demo
 
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 

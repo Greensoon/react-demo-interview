@@ -3,14 +3,16 @@
  */
 var React = require("react");
 var Header = require("./Header.react");
+var List   = require("./List.react");
 
 var Main = React.createClass({
     render : function(){
         var users = this.props.datas;
-        console.log(users)
+
         return (
             <div id="dmContainer">
                 <Header></Header>
+                <List users={users}></List>
             </div>
         )
     }

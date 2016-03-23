@@ -9,7 +9,7 @@ var Data  = require("./data");
 
 ReactDOM.render(
     (
-        <Main datas={data}>
+        <Main datas={Data}>
         </Main>
     ),
     document.getElementById("container")

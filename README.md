@@ -14,9 +14,12 @@
 Install & run：
 
 git clone https://github.com/greensoon/react-demo-interview
-cd react-demo
+
 
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+cd react-demo
+
 
 安装模块：
 npm install

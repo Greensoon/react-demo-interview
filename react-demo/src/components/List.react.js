@@ -66,11 +66,13 @@ var List = React.createClass({
 })
 
 function getCountByDept(dept,list){
-    for(var i=0,arrObj;arrObj=list[i++];){
-        if(dept==arrObj.dept){
-            return arrObj.count;
-        }
-    }
+//    for(var i=0,arrObj;arrObj=list[i++];){
+//        if(dept==arrObj.dept){
+//            return arrObj.count;
+//        }
+//    }
+    
+    return list.filter(l=> dept=l.dept)[0].count;
 }
 
 module.exports = List;
